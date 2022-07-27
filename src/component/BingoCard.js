@@ -26,8 +26,8 @@ export default class BingoCard extends Component {
             {key:19, str:"Narkin tells a story", isPicked: false},
             {key:20, str:"Fries ghosts a base", isPicked: false},
             {key:21, str:"Someone gets booped off", isPicked: false},
-            {key:22, str:"spot holder", isPicked: false},
-            {key:23, str:"spot holder 2", isPicked: false}]
+            {key:22, str:"Narkin gets fucked by stealthy", isPicked: false},
+            {key:23, str:"Dott yells at Ophie", isPicked: false}]
         }
     }
 
@@ -39,7 +39,17 @@ export default class BingoCard extends Component {
             orderedTiles.sort(() => Math.random() - 0.5).splice(12,0, free);
             this.setState({tiles: orderedTiles});
         }
-        
+    }
+
+    handleIsPickedChange(tile) {
+        const index = this.state.tiles.indexOf(tile);
+        tile.isPicked = true;
+        let orderedTiles = this.state.tiles;
+        orderedTiles.splice(index,1, tile);
+        // need to trigger a re-render here
+        this.setState({tiles: orderedTiles});
+        console.log(tile);
+
     }
 
     render() {
@@ -48,7 +58,7 @@ export default class BingoCard extends Component {
                 <div className="row row-cols-5">
                     {
                         this.state.tiles.map(tile => (
-                            <div className="col">
+                            <div className={tile.isPicked == true ? 'crossedOff' : 'bgr'} onClick={() => {this.handleIsPickedChange(tile)}}>
                                 {tile.str}
                             </div>
                         ))
