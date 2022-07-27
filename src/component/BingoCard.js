@@ -68,7 +68,7 @@ export default class BingoCard extends Component {
 
     render() {
         return(
-            <div className="container">
+            <div className="container cont">
                 <div className="row justify-content-center">
                     <div className="col-lg-2"><img src={alliance}></img></div>
                     <div className="col-lg-4">High Latency RBG Bingo</div>
@@ -78,7 +78,9 @@ export default class BingoCard extends Component {
                     {
                         this.state.tiles.map(tile => (
                             <div className={tile.isPicked == true ? 'crossedOff' : 'tile'} onClick={() => {this.handleIsPickedChange(tile)}}>
-                                {tile.str}
+                                <div>
+                                    {tile.str}
+                                </div>
                             </div>
                         ))
                     }

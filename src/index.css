@@ -17,12 +17,9 @@ code {
     monospace;
 }
 
-.bgr{
-  background-color: aquamarine;
-}
-
 .tile{
   background-color: aquamarine;
+  opacity: 0.8;
   min-height: 100px;
 }
 
@@ -31,6 +28,7 @@ code {
   min-height: 100px;
 }
 
-.cont {
-  align-content: center;
+.container {
+  height: 100vh;
+  align-items: center;
 }
