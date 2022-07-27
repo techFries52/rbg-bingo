@@ -1,4 +1,18 @@
 import React,{Component} from "react";
+import deathKnight from '../assets/p-ClassIcon-Deathknight-1.png';
+import demonhunter from '../assets/p-ClassIcon-Demonhunter-1.png';
+import druid from '../assets/p-ClassIcon-Druid-1.png';
+import hunter from '../assets/p-ClassIcon-Hunter-1.png';
+import mage from '../assets/p-ClassIcon-Mage-1.png';
+import monk from '../assets/p-ClassIcon-Monk-1.png';
+import paladin from '../assets/p-ClassIcon-Paladin-1.png';
+import priest from '../assets/p-ClassIcon-Priest-1.png';
+import rogue from '../assets/p-ClassIcon-Rogue-1.png';
+import shaman from '../assets/p-ClassIcon-Shaman-1.png';
+import warlock from '../assets/p-ClassIcon-Warlock-1.png';
+import warrior from '../assets/p-ClassIcon-Warrior-1.png';
+import alliance from '../assets/p-Alliance-symbol-1.png';
+import horde from '../assets/p-Horde-symbol-1.png';
 
 export default class BingoCard extends Component {
     constructor(props) {
@@ -55,15 +69,34 @@ export default class BingoCard extends Component {
     render() {
         return(
             <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-lg-2"><img src={alliance}></img></div>
+                    <div className="col-lg-4">High Latency RBG Bingo</div>
+                    <div className="col-lg-2"><img src={horde}></img></div>
+                </div>
                 <div className="row row-cols-5">
                     {
                         this.state.tiles.map(tile => (
-                            <div className={tile.isPicked == true ? 'crossedOff' : 'bgr'} onClick={() => {this.handleIsPickedChange(tile)}}>
+                            <div className={tile.isPicked == true ? 'crossedOff' : 'tile'} onClick={() => {this.handleIsPickedChange(tile)}}>
                                 {tile.str}
                             </div>
                         ))
                     }
                     
+                </div>
+                <div className="row">
+                    <div className="col-sm-1"><img src={deathKnight}></img></div>
+                    <div className="col-sm-1"><img src={demonhunter}></img></div>
+                    <div className="col-sm-1"><img src={druid}></img></div>
+                    <div className="col-sm-1"><img src={hunter}></img></div>
+                    <div className="col-sm-1"><img src={mage}></img></div>
+                    <div className="col-sm-1"><img src={monk}></img></div>
+                    <div className="col-sm-1"><img src={paladin}></img></div>
+                    <div className="col-sm-1"><img src={priest}></img></div>
+                    <div className="col-sm-1"><img src={rogue}></img></div>
+                    <div className="col-sm-1"><img src={shaman}></img></div>
+                    <div className="col-sm-1"><img src={warlock}></img></div>
+                    <div className="col-sm-1"><img src={warrior}></img></div>
                 </div>
             </div>
         )

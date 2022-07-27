@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  background-image: url(./assets/allianceSymbolBg.png);
+  background-position: center;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Press Start 2P', cursive;
 }
 
 code {
@@ -18,12 +23,14 @@ code {
 
 .tile{
   background-color: aquamarine;
+  min-height: 100px;
 }
 
 .crossedOff {
   background-color: coral;
+  min-height: 100px;
 }
 
-.col {
-  min-height: 100px;
+.cont {
+  align-content: center;
 }
