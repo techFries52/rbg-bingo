@@ -25,14 +25,14 @@ export default class BingoCard extends Component {
             {key:4, str:"Dott talks baseball", isPicked: false},
             {key:5, str:"'Fuck the Dodgers'", isPicked: false},
             {key:6, str:"angry about base sitting", isPicked: false},
-            {key:7, str:"Dott talks bout meeting celebrities", isPicked: false},
+            {key:7, str:"Dott talks about meeting celebrities", isPicked: false},
             {key:8, str:"begging for druid", isPicked: false},
             {key:9, str:"Scop says 'good try guys'", isPicked: false},
             {key:10, str:"Dott is murderous", isPicked: false},
             {key:11, str:"at least 3 people high", isPicked: false},
             {key:12, str:"'Spin the flag'", isPicked: false},
             {key:13, str:"poutine talk", isPicked: false},
-            {key:14, str:"cucked by ice wall", isPicked: false},
+            {key:14, str:"cucked by an ice wall", isPicked: false},
             {key:15, str:"Trene goes to a wedding", isPicked: false},
             {key:16, str:"Trene/Ty and Ophie take BS", isPicked: false},
             {key:17, str:"Dark caps flag/base", isPicked: false},
@@ -68,10 +68,10 @@ export default class BingoCard extends Component {
 
     render() {
         return(
-            <div className="container cont">
+            <div className="container-fluid px-4 py-4 cont">
                 <div className="row justify-content-center">
                     <div className="col-lg-2"><img src={alliance}></img></div>
-                    <div className="col-lg-4">High Latency RBG Bingo</div>
+                    <h2 className="col-lg-4 title">High Latency RBG Bingo</h2>
                     <div className="col-lg-2"><img src={horde}></img></div>
                 </div>
                 <div className="row row-cols-5">
