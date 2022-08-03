@@ -28,7 +28,7 @@ export default class BingoCard extends Component {
             {key:7, str:"Dott talks about meeting celebrities", isPicked: false},
             {key:8, str:"begging for druid", isPicked: false},
             {key:9, str:"Scop says 'good try guys'", isPicked: false},
-            {key:10, str:"Dott is murderous", isPicked: false},
+            {key:10, str:"Someone says Trenes name wrong", isPicked: false},
             {key:11, str:"at least 3 people high", isPicked: false},
             {key:12, str:"'Spin the flag'", isPicked: false},
             {key:13, str:"poutine talk", isPicked: false},
